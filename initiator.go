@@ -46,7 +46,8 @@ func (i *Initiator) Start() (err error) {
 			i.wg.Done()
 		}(sessionID)
 	}
-	i.wg.Wait() 
+	fmt.Println("Initiator Start Wait")
+	i.wg.Wait()
 	return
 }
 
